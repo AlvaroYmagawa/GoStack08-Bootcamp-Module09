@@ -22,7 +22,7 @@ export default function AvatarInput() {
   }, [ref, registerField]);
 
   async function handleChange(e) {
-    const data = new FormData();
+    const data = new FormData(); // Multpart data
 
     data.append('file', e.target.files[0]);
 
@@ -41,7 +41,7 @@ export default function AvatarInput() {
           src={
             preview || 'https://api.adorable.io/avatars/50/abott@adorable.png'
           }
-          alt=""
+          alt="preview"
         />
 
         <input
